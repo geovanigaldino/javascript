@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009</title>
+</head>
+<body>
+    <h1>País de origem</h1>
+    Qual seu pais de origem? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id="resultado"></div>
+    <div id="codigo"></div>
+
+    <script>
+        function buscar() {
+            let txtValorPais = document.querySelector('input#txtpais');
+            let resultado = document.querySelector('div#resultado');
+
+            if (txtValorPais.value.toLowerCase() == 'brasil') {
+                resultado.innerHTML = `Vivendo em ${txtValorPais.value}. Você é Brasileiro!`;
+            } else {
+                resultado.innerHTML = `Vivendo em ${txtValorPais.value}. Você é Estrangeiro!`;
+            }
+        }
+    </script>
+</body>
+</html>
